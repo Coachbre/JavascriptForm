@@ -10,6 +10,7 @@
   </head>
   <body>
      <form>
+        <!-- id allows javascript to target the response -->
       <input
         id="first-name"
         type="text"
@@ -18,7 +19,7 @@
       />
       <input type="text" placeholder="Last Name" name="last-name" />
       <input type="number" placeholder="age" name="age" />
-      <input type="button" value="Submit" />
+      <input type="button" value="Submit" onclick="onSubmit()"/>
     </form>
     <p id="greeting"></p>
   </body>
