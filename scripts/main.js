@@ -1,17 +1,15 @@
 console.log("Welcome to the main module")
 
-const onSubmit = () => {
-  const firstName = document.getElementById("first-name");
-  const lastName = document.getElementById("last-name");
-  const email = document.getElementById("email");
-  const password = document.getElementById("password");
-
-  const inputs = [firstName, lastName, email, password];
-
-  inputs.forEach((input) => {
-    if (input.value === "") {
-      input.classList.add("error");
-    }
-  })
-  // for each input, if the value is empty- add class of error (in css)
+const greeting = (user) => {
+  document.getElementById("greeting").innerHTML+= "Hi, " + user + "!";
+  // targets id of greeting in html then ADDS a string (actual greeting) to the inner html
+  // user (name) is passed in as a parameter to be used
 }
+
+const onSubmit = () => {
+  const firstName = document.getElementById("first-name").value;
+  // function targets the id of first-name in the html, and returns the value entered by the user
+  greeting(firstName);
+  //first name is passed in as an argument to the greeting function
+
+};
